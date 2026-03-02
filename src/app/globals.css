@@ -1,7 +1,15 @@
-:root { color-scheme: dark light; }
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  padding: 24px;
+:root{
+  --bg: #F8F7FF;
+  --surface: #FFFFFF;
+  --text-primary: #19172C;
+  --text-secondary: #544E78;
+  --accent: #7C5CFF;
 }
+
+html,body{height:100%;background:var(--bg);color:var(--text-primary);margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+
+.top-nav{position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.4));backdrop-filter: blur(8px) saturate(120%);border-bottom:1px solid rgba(0,0,0,0.06)}
+.brand{font-weight:700}
+.theme-btn{background:transparent;border:1px solid rgba(0,0,0,0.08);padding:6px 10px;border-radius:8px;cursor:pointer}
+
+main{padding:24px}
