@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p 3000",
-    "lint": "eslint . --ignore-pattern .next/**",
+    "lint": "eslint src tests",
     "typecheck": "tsc --noEmit",
     "test:unit": "vitest run tests/unit --coverage",
     "test:integration": "vitest run --config vitest.integration.config.ts",
