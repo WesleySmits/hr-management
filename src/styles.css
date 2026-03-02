@@ -1,0 +1,25 @@
+/* Motion & micro-interaction additions (UI-005) */
+:root{
+  --motion-duration: 160ms;
+  --motion-ease: cubic-bezier(.2,.8,.2,1);
+}
+*{
+  transition-duration: 0ms !important; /* base reset to avoid flashes; components opt-in below */
+}
+@media (prefers-reduced-motion: no-preference){
+  :root{--motion-duration:160ms}
+  .motion, button, a, .card, .input{transition: background-color var(--motion-duration) var(--motion-ease), color var(--motion-duration) var(--motion-ease), transform var(--motion-duration) var(--motion-ease), box-shadow var(--motion-duration) var(--motion-ease);}
+  .theme-transition{transition: background-color 200ms var(--motion-ease), color 200ms var(--motion-ease);}
+}
+@media (prefers-reduced-motion: reduce){
+  .motion, button, a, .card, .input, .theme-transition{transition: none !important; animation: none !important}
+}
+/* Hover & active feedback */
+button, a, .clickable{cursor:pointer}
+button:focus, a:focus, .clickable:focus{outline:2px solid Highlight; outline-offset:2px}
+button:hover, a:hover, .clickable:hover{transform: translateY(-2px) scale(1.01)}
+button:active, a:active, .clickable:active{transform: translateY(0) scale(0.995)}
+.card:hover{box-shadow: 0 8px 20px rgba(0,0,0,0.08)}
+.input:focus{box-shadow:0 0 0 3px rgba(59,130,246,0.15)}
+/* Theme switch instant feel: use prefers-reduced-motion to avoid flash; ensure no layout shift */
+.theme-root{will-change: background-color, color}
