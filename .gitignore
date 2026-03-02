@@ -1,2 +1,6 @@
 .firecrawl/
 node_modules/
+.next/
+coverage/
+test-results/
+.firecrawl/
