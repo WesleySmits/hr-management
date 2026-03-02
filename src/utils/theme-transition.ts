@@ -5,6 +5,7 @@ export function applyThemeInstant(root: HTMLElement, theme: 'light'|'dark'){
   // Apply data-theme attribute instantly
   root.setAttribute('data-theme', theme);
   // Force style recalc to avoid flash
-  // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-  root.offsetHeight;
+    root.offsetHeight;
 }
+
+// Note: exported helper is used by app theme controller to apply theme instantly in runtime.
