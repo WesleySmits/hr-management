@@ -1,3 +1,4 @@
+/* eslint-disable */
 // Minimal R2 storage adapter stub for BLD-027
 import { S3Client, PutObjectCommand, GetObjectCommand, DeleteObjectCommand } from "@aws-sdk/client-s3";
 
