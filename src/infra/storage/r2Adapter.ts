@@ -16,4 +16,3 @@ export async function deleteObject(key: string) {
   // TODO: call R2 delete object API
   return { ok: true };
 }
-EOF && git add src/infra/storage/r2Adapter.ts && git commit -m "fix(storage): make r2 adapter stub typescript-only stub (BLD-027)" && git rev-parse --short HEAD && git push origin main
